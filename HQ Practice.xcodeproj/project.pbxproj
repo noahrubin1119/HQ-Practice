@@ -14,6 +14,8 @@
 		4FA28B5020F5327F00AD3840 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FA28B4E20F5327F00AD3840 /* LaunchScreen.storyboard */; };
 		4FA28B5B20F5327F00AD3840 /* HQ_PracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA28B5A20F5327F00AD3840 /* HQ_PracticeTests.swift */; };
 		4FA28B6620F5327F00AD3840 /* HQ_PracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA28B6520F5327F00AD3840 /* HQ_PracticeUITests.swift */; };
+		4FA28B7420F548F100AD3840 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA28B7320F548F100AD3840 /* QuestionViewController.swift */; };
+		4FA28B7620F552EA00AD3840 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA28B7520F552EA00AD3840 /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		4FA28B6120F5327F00AD3840 /* HQ PracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "HQ PracticeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FA28B6520F5327F00AD3840 /* HQ_PracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HQ_PracticeUITests.swift; sourceTree = "<group>"; };
 		4FA28B6720F5327F00AD3840 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FA28B7320F548F100AD3840 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		4FA28B7520F552EA00AD3840 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +103,11 @@
 			children = (
 				4FA28B4520F5327C00AD3840 /* AppDelegate.swift */,
 				4FA28B4720F5327C00AD3840 /* ViewController.swift */,
+				4FA28B7320F548F100AD3840 /* QuestionViewController.swift */,
 				4FA28B4920F5327C00AD3840 /* Main.storyboard */,
 				4FA28B4C20F5327F00AD3840 /* Assets.xcassets */,
 				4FA28B4E20F5327F00AD3840 /* LaunchScreen.storyboard */,
+				4FA28B7520F552EA00AD3840 /* SwiftyJSON.swift */,
 				4FA28B5120F5327F00AD3840 /* Info.plist */,
 			);
 			path = "HQ Practice";
@@ -258,6 +264,8 @@
 			files = (
 				4FA28B4820F5327C00AD3840 /* ViewController.swift in Sources */,
 				4FA28B4620F5327C00AD3840 /* AppDelegate.swift in Sources */,
+				4FA28B7420F548F100AD3840 /* QuestionViewController.swift in Sources */,
+				4FA28B7620F552EA00AD3840 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

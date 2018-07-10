@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,14 +19,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Mzd-Ty-Tqa">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="oNS-Xo-aW0" style="IBUITableViewCellStyleDefault" id="Mzd-Ty-Tqa">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mzd-Ty-Tqa" id="Kz0-Ht-G8A">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oNS-Xo-aW0">
+                                            <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="5hs-B2-n9z" kind="show" id="c7S-Cq-a1e"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -37,6 +50,131 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lv0-oQ-4Qw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-60" y="119"/>
+        </scene>
+        <!--Question View Controller-->
+        <scene sceneID="P5d-cp-q3L">
+            <objects>
+                <viewController id="5hs-B2-n9z" customClass="QuestionViewController" customModule="HQ_Practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lIb-BW-tsD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49X-NY-nfp">
+                                <rect key="frame" x="52" y="70" width="270" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="SCv-Ba-WB4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XwS-mR-yJZ">
+                                <rect key="frame" x="0.0" y="321" width="375" height="346"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHj-YC-c2Y">
+                                        <rect key="frame" x="10" y="160" width="355" height="40"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="4nT-cg-3uF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="15"/>
+                                        <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="LOADING"/>
+                                        <connections>
+                                            <action selector="aButtonTapped:" destination="5hs-B2-n9z" eventType="touchUpInside" id="Y4a-1u-bjA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7EY-oS-cna">
+                                        <rect key="frame" x="10" y="110" width="355" height="40"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="FMS-Ps-3iN"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="15"/>
+                                        <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="LOADING"/>
+                                        <connections>
+                                            <action selector="aButtonTapped:" destination="5hs-B2-n9z" eventType="touchUpInside" id="CBN-av-tgo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I5i-NZ-yFA">
+                                        <rect key="frame" x="10" y="60" width="355" height="40"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Ajc-O9-qga"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="15"/>
+                                        <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="LOADING"/>
+                                        <connections>
+                                            <action selector="aButtonTapped:" destination="5hs-B2-n9z" eventType="touchUpInside" id="U3F-31-ZsV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fdm-Ii-OuE">
+                                        <rect key="frame" x="10" y="210" width="355" height="40"/>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Ets-QY-SwW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="15"/>
+                                        <color key="tintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="LOADING"/>
+                                        <connections>
+                                            <action selector="aButtonTapped:" destination="5hs-B2-n9z" eventType="touchUpInside" id="g0U-FD-TEB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="aHj-YC-c2Y" firstAttribute="top" secondItem="7EY-oS-cna" secondAttribute="bottom" constant="10" id="3ju-dr-F3L"/>
+                                    <constraint firstItem="I5i-NZ-yFA" firstAttribute="top" secondItem="XwS-mR-yJZ" secondAttribute="top" constant="60" id="BhA-DU-HkS"/>
+                                    <constraint firstItem="aHj-YC-c2Y" firstAttribute="leading" secondItem="XwS-mR-yJZ" secondAttribute="leading" constant="10" id="Jt5-gL-Etm"/>
+                                    <constraint firstItem="7EY-oS-cna" firstAttribute="top" secondItem="I5i-NZ-yFA" secondAttribute="bottom" constant="10" id="NSi-Rb-A3f"/>
+                                    <constraint firstItem="Fdm-Ii-OuE" firstAttribute="top" secondItem="aHj-YC-c2Y" secondAttribute="bottom" constant="10" id="TM1-E0-Dap"/>
+                                    <constraint firstAttribute="trailing" secondItem="I5i-NZ-yFA" secondAttribute="trailing" constant="10" id="Veg-AN-gZA"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fdm-Ii-OuE" secondAttribute="trailing" constant="10" id="VwD-K7-bTq"/>
+                                    <constraint firstItem="7EY-oS-cna" firstAttribute="leading" secondItem="XwS-mR-yJZ" secondAttribute="leading" constant="10" id="hCl-Rb-MrN"/>
+                                    <constraint firstItem="I5i-NZ-yFA" firstAttribute="leading" secondItem="XwS-mR-yJZ" secondAttribute="leading" constant="10" id="pv8-AP-B72"/>
+                                    <constraint firstAttribute="trailing" secondItem="aHj-YC-c2Y" secondAttribute="trailing" constant="10" id="uaB-U8-DYd"/>
+                                    <constraint firstAttribute="trailing" secondItem="7EY-oS-cna" secondAttribute="trailing" constant="10" id="xXJ-Lz-I4H"/>
+                                    <constraint firstItem="Fdm-Ii-OuE" firstAttribute="leading" secondItem="XwS-mR-yJZ" secondAttribute="leading" constant="10" id="z5K-hl-EgL"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Difficulty: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9HV-7B-8Y8">
+                                <rect key="frame" x="16" y="40" width="87" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="OBe-zU-biI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XwS-mR-yJZ" firstAttribute="trailing" secondItem="Q2N-Eh-FBi" secondAttribute="trailing" id="4hj-g1-osz"/>
+                            <constraint firstItem="XwS-mR-yJZ" firstAttribute="bottom" secondItem="Q2N-Eh-FBi" secondAttribute="bottom" id="4jP-rP-Gyq"/>
+                            <constraint firstItem="49X-NY-nfp" firstAttribute="top" secondItem="Q2N-Eh-FBi" secondAttribute="top" constant="50" id="5O7-6G-Lmb"/>
+                            <constraint firstItem="49X-NY-nfp" firstAttribute="centerX" secondItem="lIb-BW-tsD" secondAttribute="centerX" id="6jg-rp-4Nf"/>
+                            <constraint firstItem="XwS-mR-yJZ" firstAttribute="leading" secondItem="Q2N-Eh-FBi" secondAttribute="leading" id="6vc-WP-P22"/>
+                            <constraint firstItem="9HV-7B-8Y8" firstAttribute="leading" secondItem="Q2N-Eh-FBi" secondAttribute="leading" constant="16" id="C3V-OI-Dow"/>
+                            <constraint firstItem="9HV-7B-8Y8" firstAttribute="top" secondItem="Q2N-Eh-FBi" secondAttribute="top" constant="20" id="Fvs-sT-5eI"/>
+                            <constraint firstItem="XwS-mR-yJZ" firstAttribute="top" secondItem="49X-NY-nfp" secondAttribute="bottom" constant="230" id="w6s-fa-bkR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Q2N-Eh-FBi"/>
+                    </view>
+                    <connections>
+                        <outlet property="button1" destination="I5i-NZ-yFA" id="xf4-vR-aaj"/>
+                        <outlet property="button2" destination="7EY-oS-cna" id="6Al-lF-XBn"/>
+                        <outlet property="button3" destination="aHj-YC-c2Y" id="6Wd-Pg-rVy"/>
+                        <outlet property="button4" destination="Fdm-Ii-OuE" id="jtC-uN-WLa"/>
+                        <outlet property="diffucultyLabel" destination="9HV-7B-8Y8" id="ad1-YA-XCS"/>
+                        <outlet property="questionLabel" destination="49X-NY-nfp" id="MTR-Jk-FVR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hQp-gY-sr2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="652" y="117.39130434782609"/>
         </scene>
     </scenes>
 </document>
